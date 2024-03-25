@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ini Home</title>
+    <link rel="stylesheet" href="stylehome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success p-md-3" data-bs-theme="dark">
+        <div class="container vw-100">
+            <a class="navbar-brand" href="cover.html">W Group</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>      
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="cover.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="abtus.html">About Us</a>
+                </li>
+            </ul>
+                <div class="hello">
+                    <p>Hello, <span id="username"></span>!</p>
+                </div>
+                <div id="MyClockDisplay" class="clock pb-5"></div>
+            </div>
+        </div>
+    </nav>
+   
+
+    <div class="home mx-auto w-75 w-md-80">
+        <div class="content-wrapper">
+            <!-- Your content here -->
+            <div class="container mt-5">
+                <div id="tabel-container" class="mt-3 table-responsive">
+                    <table class="table table-hover" id="data-table">
+                        <thead>
+                            <tr>
+                                <th>NIM</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>Pengaturan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00000000001</td>
+                                <td>Admin</td>
+                                <td>System</td>
+                                <td>
+                                    <button class="editButton btn btn-outline-info">Ubah</button>
+                                    <button class="deleteButton btn btn-outline-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00000000002</td>
+                                <td>User 1</td>
+                                <td>Alamat 1</td>
+                                <td>
+                                    <button class="editButton btn btn-outline-info">Ubah</button>
+                                    <button class="deleteButton btn btn-outline-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00000000003</td>
+                                <td>User 2</td>
+                                <td>Alamat 2</td>
+                                <td>
+                                    <button class="editButton btn btn-outline-info">Ubah</button>
+                                    <button class="deleteButton btn btn-outline-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00000000004</td>
+                                <td>User 3</td>
+                                <td>Alamat 3</td>
+                                <td>
+                                    <button class="editButton btn btn-outline-info">Ubah</button>
+                                    <button class="deleteButton btn btn-outline-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>00000000005</td>
+                                <td>User 4</td>
+                                <td>Alamat 4</td>
+                                <td>
+                                    <button class="editButton btn btn-outline-info">Ubah</button>
+                                    <button class="deleteButton btn btn-outline-danger">Hapus</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container"></div>
+                <ul class="pagination justify-content-center" id="pagination">
+                    <li class="page-item disabled" id="previousPage"><a class="page-link" href="#">Previous</a></li>
+                    <!-- Page numbers will be added dynamically -->
+                    <li class="page-item disabled" id="nextPage"><a class="page-link" href="#">Next</a></li>
+                </ul>
+                <br><br>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Add More Data
+                  </button>
+                <div class="collapse" id="collapseExample">
+                    <br>
+                
+                    
+                    <div class="cardtable card-body">
+                        <form id="addmenu">
+                            <h3>Add Student Menu</h3>
+                            <div class="form-group row justify-content-center">
+                                <label for="nimInput" class="col-12 col-sm-2 col-form-label">NIM</label>
+                                <div class="col-10 col-sm-9">
+                                    <input type="text" class="form-control px-auto mx-auto mt-2 pt-0 pb-0" id="nimInput">
+                                </div>
+                            </div>
+                           
+                            <div class="form-group row justify-content-center">
+                                <label for="namaInput" class="col-12 col-sm-2 col-form-label">Nama</label>
+                                <div class="col-10 col-sm-9">
+                                    <input type="text" class="form-control px-auto mx-auto pe-4 mt-2 pt-0 pb-0" id="namaInput">
+                                </div>
+                            </div>
+                           
+                            <div class="form-group row justify-content-center">
+                                <label for="alamatInput" class="col-12 col-sm-2 col-form-label">Alamat</label>
+                                <div class="col-10 col-sm-9">
+                                    <input type="text" class="form-control mx-auto pe-4 mt-2 mb-3 pt-0 pb-0" id="alamatInput">
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary mb-2" id="tambahbtn">Simpan Perubahan</button>
+                        </form>
+                    </div>
+                </div>
+                    <br>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nimInput">NIM</label>
+                        <input type="text" class="form-control" id="nimInput" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="namaInput">Nama</label>
+                        <input type="text" class="form-control" id="namaInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamatInput">Alamat</label>
+                        <input type="text" class="form-control" id="alamatInput">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModalButton">Tutup</button>
+                <button type="button" class="btn btn-primary" id="saveChangesButton">Simpan Perubahan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+     $(document).ready(function(){
+        var username = localStorage.getItem('username');
+        $('#username').text(username);
+    });
+
+    function showTime(){
+            var date = new Date();
+            var h = date.getHours(); 
+            var m = date.getMinutes(); 
+            var s = date.getSeconds(); 
+            var session = "AM";
+
+            if(h == 0){
+                h = 12;
+            }
+
+            if(h > 12){
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+
+
+    // Sample data for demonstration
+    var sampleData = [
+        { nim: "00000000001", nama: "Admin", alamat: "System" },
+        { nim: "00000000002", nama: "User 1", alamat: "Alamat 1" },
+        { nim: "00000000003", nama: "User 2", alamat: "Alamat 2" },
+        { nim: "00000000004", nama: "User 3", alamat: "Alamat 3" },
+        { nim: "00000000005", nama: "User 4", alamat: "Alamat 4" }
+        // Add more data as needed
+    ];
+
+    $(document).ready(function() {
+    // Function to populate table with sample data
+    function populateTable(data) {
+        var tbody = $('#data-table tbody');
+        tbody.empty();
+        $.each(data, function(i, item) {
+            var row = '<tr>' +
+                '<td>' + item.nim + '</td>' +
+                '<td>' + item.nama + '</td>' +
+                '<td>' + item.alamat + '</td>' +
+                '<td>' +
+                '<button class="editButton btn btn-outline-info">Ubah</button>' +
+                '<button class="deleteButton btn btn-outline-danger">Hapus</button>' +
+                '</td>' +
+                '</tr>';
+            tbody.append(row);
+        });
+    }
+
+    // Function to show specified page
+    function showPage(page) {
+        var startIndex = (page - 1) * 5;
+        var endIndex = startIndex + 5;
+        rows.hide().slice(startIndex, endIndex).show();
+    }
+
+    // Update pagination
+    function updatePagination() {
+        // Count the number of pages
+        pageCount = Math.ceil(rows.length / 5);
+
+        // Remove existing pagination links
+        pagination.find('.page-item:not(:first-child, :last-child)').remove();
+
+        // Add pagination links
+        for (var i = 1; i <= pageCount; i++) {
+            pagination.find('#nextPage').before('<li class="page-item' + (i === currentPage ? ' active' : '') + '"><a class="page-link" href="#">' + i + '</a></li>');
+        }
+    }
+
+    // Pagination variables
+    var rows = $('#data-table tbody').find('tr');
+    var pagination = $('#pagination');
+    var currentPage = 1;
+    var pageCount = Math.ceil(rows.length / 5);
+
+    // Show initial page
+    showPage(currentPage);
+
+    // Update pagination links
+    updatePagination();
+
+    // Handle pagination click
+    pagination.on('click', '.page-item', function() {
+        var clickedPage = parseInt($(this).text());
+        if (!isNaN(clickedPage)) {
+            currentPage = clickedPage;
+            showPage(currentPage);
+            pagination.find('.page-item').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+
+    // Handle previous page click
+    $('#previousPage').click(function() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+            pagination.find('.page-item').removeClass('active');
+            pagination.find('.page-item:nth-child(' + currentPage + ')').addClass('active');
+        }
+    });
+
+    // Handle next page click
+    $('#nextPage').click(function() {
+        if (currentPage < pageCount) {
+            currentPage++;
+            showPage(currentPage);
+            pagination.find('.page-item').removeClass('active');
+            pagination.find('.page-item:nth-child(' + currentPage + ')').addClass('active');
+        }
+    });
+
+    // Add click event listener to edit buttons
+    $('#data-table').on('click', '.editButton', function() {
+        var row = $(this).closest('tr');
+        var nim = row.find('td:eq(0)').text();
+        var nama = row.find('td:eq(1)').text();
+        var alamat = row.find('td:eq(2)').text();
+
+        $('#editModal #nimInput').val(nim);
+        $('#editModal #namaInput').val(nama);
+        $('#editModal #alamatInput').val(alamat);
+
+        $('#editModal').modal('show');
+    });
+
+    // Function to update pagination and set current page to last page
+function updatePaginationAndGoToLastPage() {
+    // Update pagination
+    updatePagination();
+
+    // Go to last page
+    currentPage = pageCount;
+    showPage(currentPage);
+    pagination.find('.page-item').removeClass('active');
+    pagination.find('.page-item:nth-child(' + currentPage + ')').addClass('active');
+}
+
+// Add click event listener to save changes button in modal
+$('#saveChangesButton').click(function() {
+
+    var nim = $('#editModal #nimInput').val();
+    var nama = $('#editModal #namaInput').val();
+    var alamat = $('#editModal #alamatInput').val();
+
+
+    if (nim === '' || nama === '' || alamat === '') {
+            
+            const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "error",
+            title: "Data tidak boleh kosong!"
+            });
+        }
+        else {
+
+    // Temukan baris yang sesuai dengan NIM yang diubah
+    var row = $('#data-table tbody').find('tr').filter(function() {
+        return $(this).find('td:eq(0)').text() === nim;
+    });
+
+    // Perbarui nilai pada baris dengan nilai baru
+    row.find('td:eq(1)').text(nama);
+    row.find('td:eq(2)').text(alamat);
+
+    // Sembunyikan modal setelah menyimpan perubahan
+    $('#editModal').modal('hide');
+
+    const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "success",
+            title: "Data berhasil diubah!"
+            });
+
+}
+    });
+    
+
+// Add click event listener to delete buttons
+$('#data-table').on('click', '.deleteButton', function() {
+
+
+                const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+            title: "Konfirmasi",
+            text: "File yang terhapus tidak dapat dikembalikan lagi!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!   ",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+            }).then((result) => {
+            if (result.isConfirmed) {
+                
+
+                $(this).closest('tr').remove();
+    // Update rows and pagination after deletion
+    rows = $('#data-table tbody').find('tr');
+    pageCount = Math.ceil(rows.length / 5);
+    updatePaginationAndGoToLastPage();
+
+    
+    const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "success",
+            title: "Data berhasil dihapus!"
+            });
+
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            );
+            });
+
+
+
+
+
+});
+
+// Function to add new row to the table
+function addNewRow(nim, nama, alamat) {
+    var newRow = '<tr>' +
+        '<td>' + nim + '</td>' +
+        '<td>' + nama + '</td>' +
+        '<td>' + alamat + '</td>' +
+        '<td>' +
+        '<button class="editButton btn btn-outline-info">Ubah</button>' +
+        '<button class="deleteButton btn btn-outline-danger">Hapus</button>' +
+        '</td>' +
+        '</tr>';
+    $('#data-table tbody').append(newRow);
+    // Update rows and pagination after adding new row
+    rows = $('#data-table tbody').find('tr');
+    pageCount = Math.ceil(rows.length / 5);
+    updatePaginationAndGoToLastPage();
+}
+
+
+    // Add click event listener to save changes button in modal
+    $('#tambahbtn').click(function() {
+        var nim = $('#nimInput').val();
+        var nama = $('#namaInput').val();
+        var alamat = $('#alamatInput').val();
+
+        if (nim === '' || nama === '' || alamat === '') {
+            
+            const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "error",
+            title: "Harap lengkapi seluruh data!"
+            });
+
+        } else {
+            addNewRow(nim, nama, alamat);
+            $('#nimInput').val('');
+            $('#namaInput').val('');
+            $('#alamatInput').val('');
+            $('#collapseExample').collapse('hide');
+            
+            const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+            });
+            Toast.fire({
+            icon: "success",
+            title: "Data berhasil diperbaharui!"
+            });
+
+
+        }
+    });
+});
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        // Add click event listener to close modal button
+        $('#closeModalButton').click(function() {
+            $('#editModal').modal('toggle'); // Use 'toggle' instead of 'hide'
+
+        });
+    });
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

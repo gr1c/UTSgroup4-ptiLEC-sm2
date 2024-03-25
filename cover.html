@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk Dulu</title>
+    <link rel="stylesheet" href="stylecover.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+   
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success p-md-3" data-bs-theme="dark">
+    <div class="container vw-100">
+        <a class="navbar-brand" href="cover.html">W Group</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="cover.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="abtus.html">About Us</a>
+            </li>
+        </ul>
+            <div class="hello">
+                <p>Hello, <span id="username"></span>!</p>
+            </div>
+            <div id="MyClockDisplay" class="clock pb-5"></div>
+        </div>
+    </div>
+</nav>
+
+<div class="banner">
+    <div class="content-wrapper">
+        <div class="container mt-5">
+            <div class="card" style="width: 18rem;">
+                <br>
+                <center><img src="images/lobbygif.gif" class="card-img-top" alt="..."></center>
+                <div class="card-body">
+                    <br>
+                    <h5 id="textcard" class="card-title">Projek Kelompok 4</h5>
+                    <p id="textcard" class="card-text">Berikut merupakan hasil dari pekerjaan kami, Welliam-Richie-Keisen-Richard, daripada matkul PTI-Lec</p>
+                    <a href="home.html"><button class="bn632-hover bn23">Get Started</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var username = localStorage.getItem('username');
+        $('#username').text(username);
+    });
+
+    function showTime(){
+        var date = new Date();
+        var h = date.getHours(); 
+        var m = date.getMinutes(); 
+        var s = date.getSeconds(); 
+        var session = "AM";
+
+        if(h == 0){
+            h = 12;
+        }
+
+        if(h > 12){
+            h = h - 12;
+            session = "PM";
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+    }
+    showTime();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

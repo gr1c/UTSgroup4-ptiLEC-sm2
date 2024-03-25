@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="styleabt.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+   <nav class="navbar fixed-top navbar-collapse navbar-expand-lg navbar-dark bg-success p-md-3" data-bs-theme="dark">
+        <div class="container vw-100">
+            <a class="navbar-brand" href="cover.html">W Group</a>
+            <div id="MyClockDisplay" class="clock pb-5"></div> 
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
+    <span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mx-auto"></div>
+                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="cover.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="abtus.html">About Us</a>
+            </li>
+        </ul>
+            </div>
+        </div>
+    </nav>
+
+<br><br>
+
+  <div class="container">   
+        <div class="profile">
+            <img src="images/foto.jpg">
+            <div class="who">
+                <b><h3>Hai Welcome</h3></b>
+                <br />
+                <p>Kami merupakan mahasiswa Informatika dari Universitas Multimedia Nusantara angkatan 2023, yang beranggotakan Welliam Presetio Hoedoto, Richie Giansanto, Richard Giansanto, dan Keisen Susanto. Project web ini adalah project untuk memenuhi UTS dari mata kuliah Into to Internet Technology. Kami mempersembahkan web ini sebagai hasil kerja keras yang kami lakukan untuk membuat para penilai merasa puas.</p>
+            </div>
+        </div>
+        <div class="hadeh container d-flex justify-content-center">
+            <!-- <center> -->
+                <div class="coba">
+                    <div class="box box-1 "style="--img: url(images/weli.jpg);" data-text="Welliam Project Manager"></div>
+                    <div class="box box-2" style="--img: url(images/rici.jpg);" data-text="Richie Home-Table"> </div>
+                    <div class="box box-3" style="--img: url(images/ricat.jpg);" data-text="Richard Alert" > </div>
+                    <div class="box box-4" style="--img: url(images/keisen.jpg);" data-text="Keisen Frontend"  > </div>
+                </div>
+        </div>
+        <!-- <center> -->
+            <div id="footer" class="row justify-content-center justify-content-md-between">
+                <div class="abt col-md-6 text-center text-md-start mb-3 mb-md-0 mt text-light">
+                    <div class="about">
+                        <b><h4>About Us</h4></b>
+                    </div>
+                    <br />
+                    <div class="weli">
+                        <a href="https://www.instagram.com/wellplayd/">
+                            <img src="images/ig.png" alt="Instagram">
+                        </a>
+                        <span>Welliam Prasetio Hoedoto</span>
+                    </div>
+                    <div class="rici">
+                        <a href="https://www.instagram.com/gric_14/">
+                            <img src="images/ig.png" alt="Instagram">
+                        </a>
+                        <span>Richie Giansanto</span>
+                    </div>
+                    <div class="ricat">
+                        <a href="https://www.instagram.com/gchrd8/">
+                            <img src="images/ig.png" alt="Instagram">
+                        </a>
+                        <span>Richard Giansanto</span>
+                    </div>
+                    <div class="keisen">
+                        <a href="https://www.instagram.com/keisen_susantoo/">
+                            <img src="images/ig.png" alt="Instagram">
+                        </a>
+                        <span>Keisen Susanto</span>
+                    </div>
+                </div>
+
+                <div class="PT col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex flex-column align-items-end">
+                        <div class="col-12 col-md text-center text-md-end text-md-start mb-3 mb-md-0">
+                            <br />
+                            <br />
+                            <b><p>W Group</p></b>
+                            <div class="kiri">
+                                <a href="https://www.facebook.com/search/top?q=universitas%20multimedia%20nusantara">
+                                    <span role="button" class="logo">
+                                        <img src="images/facebook.png" class="img-fluid" style="width: 40px">
+                                    </a>
+                                    </span>
+                                    <span role="button" class="logo">
+                                        <a href="https://www.instagram.com/universitasmultimedianusantara/">
+                                            <img src="images/instagram.png" class="img-fluid" style="width: 40px">
+                                        </a>
+                                    </span>
+                                    <a href="https://www.youtube.com/@UniversitasMultimediaNusantara">
+                                        <span role="button" class="logo">
+                                            <img src="images/youtube.png" class="img-fluid" style="width: 40px">
+                                        </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <p class="col-12 col-md text"></p>
+                        </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+</div>
+
+<script>
+    document.getElementById('navbarToggle').addEventListener('click', function () {
+        document.getElementById('navbarNav').classList.toggle('show');
+    });
+
+
+    function showTime(){
+            var date = new Date();
+            var h = date.getHours(); 
+            var m = date.getMinutes(); 
+            var s = date.getSeconds(); 
+            var session = "AM";
+
+            if(h == 0){
+                h = 12;
+            }
+
+            if(h > 12){
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-H+K5mWPRsUEmJWjJaKf5VBVqOp6Zj3x8lAihRcIoYL+0szVZ2U9CtksgmiDuhzsw" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
